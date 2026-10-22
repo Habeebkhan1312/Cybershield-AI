@@ -1,0 +1,35 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Data (generated at runtime)
+data/raw/
+data/processed/
+data/index/
+data/uploads/
+data/cybershield.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Gemini
+.gemini/

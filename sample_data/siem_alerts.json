@@ -1,0 +1,112 @@
+[
+  {
+    "timestamp": "2024-03-15T08:31:20Z",
+    "alert_name": "Multiple Failed Logins",
+    "severity": "HIGH",
+    "source_ip": "192.168.50.99",
+    "dest_ip": "10.0.1.50",
+    "username": "jsmith",
+    "description": "7 failed login attempts detected from 192.168.50.99 targeting user jsmith within 2 minutes",
+    "raw_event": {"event_ids": [4625], "count": 7, "workstation": "WS-PC101"}
+  },
+  {
+    "timestamp": "2024-03-15T08:32:05Z",
+    "alert_name": "Successful Login After Failures",
+    "severity": "MEDIUM",
+    "source_ip": "192.168.50.99",
+    "dest_ip": "10.0.1.50",
+    "username": "jsmith",
+    "description": "User jsmith successfully logged in from 192.168.50.99 after 7 prior failures",
+    "raw_event": {"event_id": 4624, "prior_failures": 7, "workstation": "WS-PC101"}
+  },
+  {
+    "timestamp": "2024-03-15T09:50:00Z",
+    "alert_name": "Privilege Escalation",
+    "severity": "HIGH",
+    "source_ip": "10.0.2.10",
+    "dest_ip": "10.0.2.1",
+    "username": "admin_ops",
+    "description": "Privileged access assigned to admin_ops on SRV-DC01 after prior login failures",
+    "raw_event": {"event_id": 4672, "workstation": "SRV-DC01"}
+  },
+  {
+    "timestamp": "2024-03-15T18:01:15Z",
+    "alert_name": "Brute Force Attempt",
+    "severity": "HIGH",
+    "source_ip": "203.0.113.15",
+    "dest_ip": "10.0.0.1",
+    "username": "contractor1",
+    "description": "6 failed login attempts from external IP 203.0.113.15 targeting contractor1",
+    "raw_event": {"event_ids": [4625], "count": 6, "workstation": "VPN-GW01"}
+  },
+  {
+    "timestamp": "2024-03-15T18:02:00Z",
+    "alert_name": "Successful Login After Brute Force",
+    "severity": "HIGH",
+    "source_ip": "203.0.113.15",
+    "dest_ip": "10.0.0.1",
+    "username": "contractor1",
+    "description": "contractor1 successfully authenticated from 203.0.113.15 after brute force attempt",
+    "raw_event": {"event_id": 4624, "prior_failures": 6, "workstation": "VPN-GW01"}
+  },
+  {
+    "timestamp": "2024-03-16T02:15:00Z",
+    "alert_name": "Off-Hours Admin Login",
+    "severity": "MEDIUM",
+    "source_ip": "10.0.2.10",
+    "dest_ip": "10.0.2.1",
+    "username": "admin_ops",
+    "description": "Admin account admin_ops logged in at 02:15 UTC on domain controller",
+    "raw_event": {"event_id": 4624, "workstation": "SRV-DC01"}
+  },
+  {
+    "timestamp": "2024-03-16T03:00:00Z",
+    "alert_name": "Unknown User Login",
+    "severity": "MEDIUM",
+    "source_ip": "198.51.100.44",
+    "dest_ip": "10.0.0.1",
+    "username": "unknown_user",
+    "description": "Unrecognized user unknown_user logged in from external IP at 03:00 UTC",
+    "raw_event": {"event_id": 4624, "workstation": "VPN-GW01"}
+  },
+  {
+    "timestamp": "2024-03-15T08:01:12Z",
+    "alert_name": "Normal Login",
+    "severity": "INFO",
+    "source_ip": "10.0.1.50",
+    "dest_ip": "10.0.1.1",
+    "username": "jsmith",
+    "description": "Standard workstation login during business hours",
+    "raw_event": {"event_id": 4624, "workstation": "WS-PC101"}
+  },
+  {
+    "timestamp": "2024-03-15T08:15:30Z",
+    "alert_name": "Normal Login",
+    "severity": "INFO",
+    "source_ip": "10.0.1.55",
+    "dest_ip": "10.0.1.1",
+    "username": "mchen",
+    "description": "Standard workstation login during business hours",
+    "raw_event": {"event_id": 4624, "workstation": "WS-PC105"}
+  },
+  {
+    "timestamp": "2024-03-15T11:30:00Z",
+    "alert_name": "Service Account Failure",
+    "severity": "LOW",
+    "source_ip": "172.16.0.50",
+    "dest_ip": "10.0.3.10",
+    "username": "svc_backup",
+    "description": "Service account svc_backup failed to authenticate to file server",
+    "raw_event": {"event_id": 4625, "count": 2, "workstation": "SRV-FILE01"}
+  },
+  {
+    "timestamp": "2024-03-16T02:16:00Z",
+    "alert_name": "Off-Hours Privilege Assignment",
+    "severity": "HIGH",
+    "source_ip": "10.0.2.10",
+    "dest_ip": "10.0.2.1",
+    "username": "admin_ops",
+    "description": "Special privileges assigned to admin_ops at 02:16 UTC outside normal hours",
+    "raw_event": {"event_id": 4672, "workstation": "SRV-DC01"}
+  }
+]
